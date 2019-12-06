@@ -1,0 +1,83 @@
+<div class="container-fluid mt-3">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10">
+    <div class="card bg-light">
+      <article class="card-body mx-auto" >
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                <div class="col-6">
+                    <div class="alert alert-secondary p-0" role="alert"><p class="lead text-center mt-2"><b>Recommended Ratio of Macronutrients for you</b></p></div>
+                    <p-chart type="pie" [data]="data"></p-chart>
+                </div>
+                <div class="col-6">
+                    <div class="alert alert-secondary p-0" role="alert"><p class="lead text-center mt-2"><b>Recommended daily calorie intake for you</b></p></div>
+                    <h1 [countUp]="kcal" class="display-1 text-center mt-3 mb-3">0</h1>
+                    <h1 class="display-3 text-center mt-3 mb-3">kcal</h1>
+                </div>
+            </div>
+                <div>
+                    <div class="alert alert-secondary p-0 mt-5" role="alert"><p class="lead text-center mt-2"><b>You vs the average Lifter</b></p></div>                
+                    <p-chart type="bar" [data]="data2"></p-chart> 
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="jumbotron">
+                    <img src="assets/img/avatar.gif" id="profileimg" class="img-thumbnail">
+                    <h1 class="display-4 text-center mt-3 mb-3">Welcome, {{currentUser.username}}</h1>
+                    <p class="lead">This is your page, here you will find all the information you'll need to keep track of your fitness journey. Enjoy!</p>
+                    <hr class="my-4">
+                    <h4 class="h4 mb-4 text-center">Your current stats</h4>
+                    <div class="row">
+                        <div class="col-4">
+                            <b>Age</b><p class="lead">{{currentUser.ph_entry[0].age}}</p>
+                        </div>
+                        <div class="col-4">
+                            <b>Height</b><p class="lead">{{currentUser.ph_entry[0].height}}m</p>
+                        </div>
+                        <div class="col-4">
+                            <b>Weight</b><p class="lead">{{currentUser.ph_entry[0].weight}}kg</p>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <h4 class="mb-4 text-center">Your best lifts</h4>
+                    <div class="row">
+                            <div class="col-4">
+                                <b>Bench Press</b><p class="lead">{{currentUser.lifts[0].bench}} kgs</p>
+                            </div>
+                            <div class="col-4">
+                                <b>Squat</b><p class="lead">{{currentUser.lifts[0].squat}} kgs</p>
+                            </div>
+                            <div class="col-4">
+                                <b>Deadlift</b><p class="lead">{{currentUser.lifts[0].deadlift}} kgs</p>
+                            </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-4">
+                                <b>Overhead Press</b><p class="lead">{{currentUser.lifts[0].ohp}} kgs</p>
+                            </div>
+                            <div class="col-4">
+                                <b>Barbell Row</b><p class="lead">{{currentUser.lifts[0].bbrow}} kgs</p>
+                            </div>
+                            <div class="col-4">
+                                <b>Pull ups</b><p class="lead">{{currentUser.lifts[0].pullup}} kgs</p>
+                            </div>
+                    </div>
+                    <hr>
+                    <div class="text-center mt-5 mb-0">
+                        <b class="align-top">Level: </b>
+                        <span *ngIf="novice" class="badge badge-pill badge-primary text-center">Novice</span>
+                        <span *ngIf="intermediate" class="badge badge-pill badge-warning text-center">Intermediate</span>
+                        <span *ngIf="advanced" class="badge badge-pill badge-danger text-center">Advanced</span>
+                        <span *ngIf="elite" class="badge badge-pill badge-success text-center">Elite</span>
+                    </div>
+                  </div>
+            </div>
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="col-1"></div>
+  </div>
+  </div>

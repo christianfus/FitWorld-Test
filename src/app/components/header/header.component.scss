@@ -1,0 +1,21 @@
+nav{
+    background-color: #8f0707 !important;
+    
+    }
+button{
+    background: #8f0707 !important;
+}
+.nav-item{
+    border-right: 1px solid black;
+    a{
+        color: whitesmoke;
+    }
+    a:hover { COLOR: white; }
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-right: 0.3em;
+    padding-left: 0.3em;
+}
+.nav-item:hover{
+    background: #a53d3d;
+}

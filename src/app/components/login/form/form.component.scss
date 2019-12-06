@@ -1,0 +1,30 @@
+.login{
+    background: lightgray;
+    height: 100%;
+    border-radius: 7px;
+    max-width: 580px;
+    max-height: 100%;
+    min-height: 560px;
+}
+.btn{
+    background: #8f0707;
+    border: greenyellow;
+}
+
+.btn :hover{
+    background: blue;
+}
+
+@media (min-width: 1000px) {
+    .logo{
+        width: 70%;
+        margin-left: 15%;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .logo{
+        width: 100%;
+        
+    }
+  }

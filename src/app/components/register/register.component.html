@@ -1,0 +1,168 @@
+<div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+  <div class="card bg-light">
+    <article class="card-body mx-auto" style="max-width: 1200px;">
+      <h4 class="card-title mt-3 text-center">Create Account</h4>
+      <p class="text-center">Get started with your free account</p>
+      <p>
+        <a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Login via Twitter</a>
+        <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
+      </p>
+
+      <form #userForm="ngForm" (ngSubmit)="addUser(userForm)">
+        <p class="divider-text mt-5">
+          <span class="bg-light">USER INFORMATION</span>
+        </p>
+
+        <div class="form-group input-group">
+          <!-- NAME -->
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+          </div>
+          <input name="username" #username="ngModel" (ngModel)="user.username" class="form-control" placeholder="Full name" type="text">
+        </div>
+
+        <!-- PASSWD -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+          </div>
+          <input name="password" #password1="ngModel" (ngModel)="user.password" class="form-control" placeholder="Create password" type="password">
+        </div>
+
+        <!-- EMAIL -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+          </div>
+          <input name="mail" #mail="ngModel" (ngModel)="user.mail" class="form-control" placeholder="Email address" type="email">
+        </div>
+
+        <!-- PERSONAL INFORMATION -->
+
+        <p class="divider-text mt-5">
+          <span class="bg-light">PERSONAL INFORMATION</span>
+        </p>
+
+        <div class="row">
+          
+
+            <div class="col-4">
+              <!-- HEIGHT -->
+              <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+              </div>
+              <input name="height" #height="ngModel" (ngModel)="user.height" class="form-control" placeholder="Height" type="text">
+            </div>
+          </div>
+          <div class="col-4">
+            <!-- WEIGHT -->
+            <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+              </div>
+              <input name="weight" #weight="ngModel" (ngModel)="user.weight" class="form-control" placeholder="Weight">
+            </div>
+          </div>
+          <div class="col-4">
+            <!-- AGE -->
+            <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+              </div>
+              <input name="age" #age="ngModel" (ngModel)="user.age" class="form-control" placeholder="Age">
+            </div>
+          </div>
+        </div>
+
+        <!-- LIFTS -->
+
+        <div class="row">
+          <p class="divider-text col-12 mt-3">
+            <span class="bg-light">HOW MUCH CAN YOU LIFT BRAH (1 RM)</span>
+          </p>
+          <div class="col-md-4 col-xs-12 card bg-light">
+            <h5 class="card-title text-center">BENCH PRESS</h5>
+            <img src="assets/img/bench.png">
+            <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+              </div>
+              <input name="bench" #bench="ngModel" (ngModel)="user.bench" class="form-control" placeholder="How much do you lift?">
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12 card bg-light">
+            <h5 class="card-title text-center">DEADLIFT</h5>
+            <img src="assets/img/dead.png">
+            <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+              </div>
+              <input name="deadlift" #deadlift="ngModel" (ngModel)="user.deadlift" class="form-control" placeholder="How much do you lift?">
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12 card bg-light">
+            <h5 class="card-title text-center">SQUAT</h5>
+            <img src="assets/img/squat.png">
+            <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+              </div>
+              <input name="squat" #squat="ngModel" (ngModel)="user.squat" class="form-control" placeholder="How much do you lift?">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 col-xs-12 card bg-light">
+            <h5 class="card-title text-center">PULL UP</h5>
+            <img src="assets/img/pullups.png">
+            <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+              </div>
+              <input name="pullup" #pullup="ngModel" (ngModel)="user.pullup" class="form-control" placeholder="How much do you lift?">
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12 card bg-light">
+            <h5 class="card-title text-center">OVERHEAD PRESS</h5>
+            <img src="assets/img/ohp.png">
+            <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+              </div>
+              <input name="ohp" #ohp="ngModel" (ngModel)="user.ohp" class="form-control" placeholder="How much do you lift?">
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12 card bg-light">
+            <h5 class="card-title text-center">BARBELL ROW</h5>
+            <img src="assets/img/row.png">
+            <div class="form-group input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+              </div>
+              <input name="bbrow" #bbrow="ngModel" (ngModel)="user.bbrow" class="form-control" placeholder="How much do you lift?">
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTON -->
+        <div *ngIf="errorForm" class="alert alert-danger" role="alert">
+          *CHECK ALL FIELDS ARE FILLED
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+        </div>
+        <p class="text-center">Have an account? <a href="">Log In</a> </p>
+
+      </form>
+    </article>
+  </div>
+  <!-- CARD -->
+</div>
+<div class="col-1"></div>
+</div>
+</div>

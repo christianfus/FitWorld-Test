@@ -1,0 +1,53 @@
+<div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+  <div class="card bg-light">
+    <article class="card-body mx-auto" >
+      <p-table [value]="lifts">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Bench</th>
+                <th>Squat</th>
+                <th>Deadlift</th>
+                <th>Overhead Press</th>
+                <th>Barbell Row</th>
+                <th>Pull ups</th>
+                
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-lift>
+            <tr>
+                <td>{{lift.bench}}</td>
+                <td>{{lift.squat}}</td>
+                <td>{{lift.deadlift}}</td>
+                <td>{{lift.ohp}}</td>
+                <td>{{lift.bbrow}}</td>
+                <td>{{lift.pullup}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+    <form #userForm="ngForm" (ngSubmit)="addEntryToLog(userForm)">
+    <div class="row mt-5">
+      <div class="col-2">Bench: <input type="text" pInputText name="bench" (ngModel)="user.bench" /></div>
+      <div class="col-2">Squats:   <input type="text" pInputText name="squat" (ngModel)="user.squat" /></div>
+      <div class="col-2">Deadlift: <input type="text" pInputText name="deadlift" (ngModel)="user.deadlift" /></div>
+      <div class="col-2">Overhead Press: <input type="text" pInputText name="ohp" (ngModel)="user.ohp" /></div>
+      <div class="col-2">Barbell Row: <input type="text" pInputText name="bbrow" (ngModel)="user.bbrow" /></div>
+      <div class="col-2">Pull ups: <input type="text" pInputText name="pullup" (ngModel)="user.pullup" /></div>
+    </div>
+    <button type="submit" class="btn btn-secondary btn-lg btn-block mt-3">ADD NEW ENTRY TO THE LOG</button>
+    </form>
+    <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6 mt-5">
+      <p-chart type="line" [data]="data"></p-chart>
+    </div>
+    <div class="col-3"></div>
+    </div>
+    </article>
+  </div>
+</div>
+<div class="col-1"></div>
+</div>
+</div>
