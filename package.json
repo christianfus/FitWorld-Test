@@ -27,7 +27,7 @@
     "core-js": "^2.5.4",
     "countup.js-angular2": "^7.1.1",
     "jquery": "^3.4.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "popper": "^1.0.1",
     "popper.js": "^1.14.7",
     "primeicons": "^1.0.0",
